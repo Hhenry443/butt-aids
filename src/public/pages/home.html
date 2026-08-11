@@ -9,31 +9,68 @@
 
     <!-- Welcome Text -->
     <div class="w-1/2 h-2/3 bg-blue-500 border-10 border-blue-800" style="border-style: inset">
-        <!-- Welcome Banner -->
-        <div class="flex justify-around items-center h-1/5">
-            <img src="/images/welcomeCat.gif" alt="Welcome cat">
-            <p class="text-6xl font-bold font-serif">Welcome to <span class="text-white">isbuttaidsathing</span>!</p>
-            <img src="/images/welcomeCat.gif" alt="Welcome cat">
+        <div id="welcome-screen">
+            <!-- Welcome Banner -->
+            <div class="flex justify-around items-center h-1/5">
+                <img src="/images/welcomeCat.gif" alt="Welcome cat">
+                <p class="text-6xl font-bold font-serif">Welcome to <span class="text-white">isbuttaidsathing</span>!</p>
+                <img src="/images/welcomeCat.gif" alt="Welcome cat">
+            </div>
+
+            <!-- Body -->
+            <div class="flex items-center h-4/5">
+                <div class="flex justify-center items-center w-1/2 h-full">
+                    <img src="/images/me.png" alt="Me looking cute" class="max-w-full max-h-9/10 object-contain">
+                </div>
+                <div class="flex flex-col items-start w-1/2 h-full">
+                    <p class="text-3xl mt-10 font-bold">HELLO</p>
+                    <p class="mt-4">Welcome to the official website of henry barnes...</p>
+                    <p class="mt-2">This is the website of YOUR dreams.</p>
+                    <p class="mt-2">Just take a moment to breathe. You are not ready for how epic this is.</p>
+                    <p class="mt-2"> <--- Look into my eyes and say some affirmations.
+                    <!-- Todo: Add affirmation audio -->
+                    <p class="mt-20">Now get in you big goof!.</p>
+                    <img src="/images/EnterHere.gif" class="mt-10 cursor-pointer" onclick="toggleHome()">
+
+                </div>
+            </div>
         </div>
 
-        <!-- Body -->
-        <div class="flex items-center h-4/5">
-            <div class="flex justify-center items-center w-1/2 h-full">
-                <img src="/images/me.png" alt="Me looking cute" class="max-w-full max-h-9/10 object-contain">
+        <div id="navigation-menu" hidden>
+            <!-- Welcome Banner -->
+            <div class="flex justify-around items-center h-1/5">
+                <img src="/images/monkeyJump.gif" alt="Jumping monkey">
+                <p class="text-6xl font-bold font-serif">Links!</p>
+                <img src="/images/monkeyJump.gif" alt="Jumping monkey">
             </div>
-            <div class="flex flex-col items-start w-1/2 h-full">
-                <p class="text-3xl mt-10 font-bold">HELLO</p>
-                <p class="mt-4">Welcome to the official website of henry barnes...</p>
-                <p class="mt-2">This is the website of YOUR dreams.</p>
-                <p class="mt-2">Just take a moment to breathe. You are not ready for how epic this is.</p>
-                <p class="mt-2"> <--- Look into my eyes and say some affirmations.</p>
-                <p class="mt-20">Now get in you big goof!.</p>
-                <img src="/images/EnterHere.gif" class="mt-10">
 
+            <!-- Body -->
+            <div class="grid grid-cols-2 h-4/5 gap-4 space-y-6">
+                <div id="blog-button" class="h-32 w-full flex items-center justify-center">
+                    <a href="/blog" class="max-w-full max-h-full"><img src="/images/blogButton.png" class="max-w-full max-h-full object-contain"></a>
+                </div>
+                <div id="projects-button" class="h-32 w-full flex items-center justify-center">
+                    <a href="/projects" class="max-w-full max-h-full"><img src="/images/blogButton.png" class="max-w-full max-h-full object-contain"></a>
+                </div>
+                <div id="back-to-welcome-button" class="h-32 w-full flex items-center justify-center">
+                    <a onclick="toggleHome()" class="max-w-full max-h-full hover:cursor-pointer"><img src="/images/blogButton.png" class="max-w-full max-h-full object-contain"></a>
+                </div>
             </div>
         </div>
     </div>
 
     <img src="/images/oldPeople.gif">
+
+    <script>
+        function toggleHome() {
+            let welcomeScreen = document.getElementById("welcome-screen")
+            let navigationMenu = document.getElementById("navigation-menu")
+
+            welcomeScreen.toggleAttribute("hidden")
+            navigationMenu.toggleAttribute("hidden")
+
+            console.log("dashgjbjhabsgjhdgasjhgdjhasgj")
+        }
+    </script>
 </body>
 </html>
