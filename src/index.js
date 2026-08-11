@@ -36,7 +36,7 @@ app.use(session({
 import {requireAuth} from "./middleware/auth.js";
 
 // == Serving & Middleware ==
-app.use(express.static('public'));
+app.use(express.static('src/public'));
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
