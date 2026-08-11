@@ -1,0 +1,33 @@
+{
+  "name": "butt-aids",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Hhenry443/butt-aids#readme",
+  "bugs": {
+    "url": "https://github.com/Hhenry443/butt-aids/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hhenry443/butt-aids.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "tailwind": "npx @tailwindcss/cli -i src/public/css/input.css -o src/public/css/output.css --watch"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-mysql-session": "^3.0.3",
+    "express-session": "^1.19.0",
+    "mysql2": "^3.23.3",
+    "nodemon": "^3.1.14",
+    "tailwindcss": "^4.3.3"
+  }
+}
